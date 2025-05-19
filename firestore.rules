@@ -1,0 +1,50 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read access to parking spots
+    match /parking_spots/{document=**} {
+      allow read: if true;
+      // Allow creating new parking spots for authenticated users
+      allow create: if request.auth != null;
+      // Allow owners to update their parking spots
+      allow update: if request.auth != null && (
+        // Either the user is the owner
+        (resource.data.ownerId != null && request.auth.uid == resource.data.ownerId) ||
+        // Or they're just updating rating fields
+        request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['averageRating', 'ratingCount', 'lastRatingUpdate'])
+      );
+      allow delete: if request.auth != null && 
+        resource.data.ownerId != null && 
+        request.auth.uid == resource.data.ownerId;
+    }
+    
+    // Allow creating and reading bookings
+    match /bookings/{document=**} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow delete: if request.auth != null && request.auth.uid == resource.data.userId;
+    }
+
+    // Allow transactions for the parking spot payments
+    match /transactions/{document=**} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+      allow update: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow delete: if false; // Transactions should never be deleted
+    }
+
+    // Allow reading config
+    match /config/{document=**} {
+      allow read: if true;
+      allow write: if false; // Only allow updates through admin
+    }
+
+    // Allow reading and writing users
+    match /users/{document=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == request.resource.data.userId;
+    }
+  }
+} 

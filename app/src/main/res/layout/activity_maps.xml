@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Container for the map fragment -->
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- ProgressBar showing while waiting for location -->
+    <ProgressBar
+        android:id="@+id/progress_loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/primary_dark"
+        android:layout_centerInParent="true" />
+
+    <!-- "View nearby Parking Spots" Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_focus_location"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="View nearby Parking Spots"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        app:cornerRadius="8dp"
+        app:elevation="2dp"
+        app:icon="@android:drawable/ic_menu_mylocation"
+        app:iconTint="@color/white"
+        app:iconSize="18dp"
+        app:iconPadding="8dp"
+        android:paddingHorizontal="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_all_spots"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="View All Parking Spots"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/accent"
+        app:cornerRadius="8dp"
+        app:elevation="2dp"
+        app:icon="@android:drawable/ic_menu_mapmode"
+        app:iconTint="@color/white"
+        app:iconSize="18dp"
+        app:iconPadding="8dp"
+        android:paddingHorizontal="16dp"
+        android:layout_above="@id/btn_focus_location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" />
+
+</RelativeLayout>

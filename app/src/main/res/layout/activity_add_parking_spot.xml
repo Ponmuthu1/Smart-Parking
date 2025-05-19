@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".AddParkingSpotActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Parking Spot"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fee: ₹2000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etParkingSpotName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Parking Spot Name*"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Latitude* (-90 to 90)"
+                android:inputType="numberSigned|numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Longitude* (-180 to 180)"
+                android:inputType="numberSigned|numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPricePerHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Price Per Hour (₹)*"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOwnerUpi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="UPI ID*"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select at least one category (first selected will be primary)"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/categoriesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <CheckBox
+                android:id="@+id/cbStandard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Standard"
+                android:checked="true" />
+
+            <CheckBox
+                android:id="@+id/cbEvCharging"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EV Charging" />
+
+            <CheckBox
+                android:id="@+id/cbCoveredRoof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Covered Roof" />
+                
+            <CheckBox
+                android:id="@+id/cbOpenRoof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open Roof" />
+                
+            <CheckBox
+                android:id="@+id/cbValet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Valet Parking" />
+                
+            <CheckBox
+                android:id="@+id/cbHandicap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Handicap Accessible" />
+                
+            <CheckBox
+                android:id="@+id/cbSecure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Secure 24/7" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPickLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Location on Map"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnProceedToPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proceed to Payment (₹2000)"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView> 

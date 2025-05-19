@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.V1" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/blue_medium</item>
+        <item name="android:windowBackground">#1A2333</item>
+        <item name="android:textColorPrimary">@color/blue_light</item>
+        <item name="android:textColorSecondary">@color/blue_medium</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="elevationOverlayEnabled">true</item>
+    </style>
+</resources>

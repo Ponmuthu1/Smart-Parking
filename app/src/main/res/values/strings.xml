@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Smart Parking</string>
+    <string name="default_web_client_id">604989601672-i5j3q6or56f65721o7tebhmlgsdngce0.apps.googleusercontent.com</string>
+    <string name="google_maps_key">AIzaSyAIMOjdSZt4VMwvWPxQ3JVoW7dUcJ0lwjw</string>
+    <string name="razorpay_key_id">rzp_test_fa7GlrlF53WAV4</string>
+    <string-array name="parking_categories">
+        <item>Standard</item>
+        <item>EV Charging</item>
+        <item>Open Roof</item>
+        <item>Covered Roof</item>
+        <item>Valet Parking</item>
+        <item>Handicap Accessible</item>
+        <item>Secure 24/7</item>
+    </string-array>
+</resources>

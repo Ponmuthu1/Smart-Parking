@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Enhanced color palette with requested theme -->
+    <color name="blue_light_bg">#F7FBFC</color>
+    <color name="blue_light">#D6E6F2</color>
+    <color name="blue_light_transparent">#EBF7FBFC</color>
+    <color name="blue_medium">#B9D7EA</color>
+    <color name="blue_primary">#769FCD</color>
+    
+    <!-- Basic app colors mapped to the new palette -->
+    <color name="primary">#769FCD</color>
+    <color name="primary_dark">#5782B0</color> <!-- Darker shade of #769FCD -->
+    <color name="primary_light">#B9D7EA</color>
+    <color name="accent">#769FCD</color>
+    <color name="background_light">#F7FBFC</color>
+
+    <!-- Text colors with improved contrast -->
+    <color name="text_primary">#2E4A6A</color> <!-- Dark blue that works with the color scheme -->
+    <color name="text_secondary">#5782B0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Status colors with better contrast -->
+    <color name="success">#4CAD90</color> <!-- Green that complements the blue theme -->
+    <color name="warning">#E9C46A</color>
+    <color name="error">#E76F51</color>
+    
+    <!-- Default Material design colors to fix build errors -->
+    <color name="design_default_color_error">#E76F51</color>
+    <color name="design_default_color_secondary">#B9D7EA</color>
+
+    <!-- Category colors - adapted to match new theme -->
+    <color name="category_standard">#769FCD</color>
+    <color name="category_ev_charging">#4CAD90</color>
+    <color name="category_open_roof">#E9C46A</color>
+    <color name="category_covered_roof">#9C27B0</color>
+    <color name="category_valet">#E76F51</color>
+    <color name="category_handicap">#5782B0</color>
+    <color name="category_secure">#607D8B</color>
+</resources>
