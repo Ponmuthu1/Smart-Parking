@@ -51,4 +51,4 @@ The `strings.xml` file contains sensitive API keys and is intentionally excluded
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
