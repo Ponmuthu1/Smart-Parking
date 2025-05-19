@@ -72,6 +72,10 @@ class MainActivity : AppCompatActivity() {
         binding.btnAddParkingSpot.setOnClickListener {
             startActivity(Intent(this, AddParkingSpotActivity::class.java))
         }
+
+        binding.btnSubscription.setOnClickListener {
+            startActivity(Intent(this, SubscriptionActivity::class.java))
+        }
     }
     
     /**

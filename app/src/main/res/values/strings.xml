@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Smart Parking</string>
-    <string name="default_web_client_id">604989601672-i5j3q6or56f65721o7tebhmlgsdngce0.apps.googleusercontent.com</string>
-    <string name="google_maps_key">AIzaSyAIMOjdSZt4VMwvWPxQ3JVoW7dUcJ0lwjw</string>
-    <string name="razorpay_key_id">rzp_test_fa7GlrlF53WAV4</string>
+    <!-- App Name -->
+    <string name="app_name">Smart Parking</string>
+
+    <!-- Firebase Configuration -->
+    <string name="default_web_client_id">YOUR_FIREBASE_WEB_CLIENT_ID</string>
+    
+    <!-- Razorpay Configuration -->
+    <string name="razorpay_key_id">YOUR_RAZORPAY_KEY_ID</string>
+    
+    <!-- Google Maps Configuration -->
+    <string name="google_maps_key">YOUR_GOOGLE_MAPS_API_KEY</string>
+
+    <!-- Common Strings -->
+    <string name="welcome">Welcome</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
+
+    <!-- Authentication Messages -->
+    <string name="login_successful">Login Successful</string>
+    <string name="login_failed">Login Failed</string>
+    <string name="logout_successful">Logged out successfully</string>
+    <string name="google_sign_in_failed">Google sign in failed</string>
+    <string name="authentication_failed">Authentication Failed</string>
+
+    <!-- Booking Related -->
+    <string name="active_bookings">Your Active Bookings</string>
+    <string name="no_active_bookings">You don\'t have any active bookings</string>
+    <string name="view_all_bookings">View All Bookings</string>
+    <string name="booking_history">Booking History</string>
+    <string name="booking_failed">Failed to create booking</string>
+    <string name="booking_successful">Booking created successfully</string>
+
+    <!-- Parking Spot Related -->
+    <string name="add_parking_spot">Add Parking Spot</string>
+    <string name="view_parking_map">View Parking Map</string>
+    <string name="parking_spot_name">Parking Spot Name</string>
+    <string name="parking_spot_location">Location</string>
+    <string name="parking_spot_price">Price per Hour</string>
+    <string name="parking_spot_available">Available</string>
+    <string name="parking_spot_unavailable">Unavailable</string>
+
+    <!-- Subscription Related -->
+    <string name="premium_subscription">Premium Subscription</string>
+    <string name="subscription_benefits">Subscription Benefits</string>
+    <string name="subscribe_now">Subscribe Now</string>
+    <string name="extend_subscription">Extend Subscription</string>
+    <string name="subscription_successful">Subscription successful</string>
+    <string name="subscription_failed">Subscription failed</string>
+
+    <!-- Payment Related -->
+    <string name="payment_successful">Payment successful</string>
+    <string name="payment_failed">Payment failed</string>
+    <string name="processing_payment">Processing payment…</string>
+    <string name="payment_cancelled">Payment cancelled</string>
+
+    <!-- Error Messages -->
+    <string name="error_loading_bookings">Failed to load bookings</string>
+    <string name="error_location_unavailable">Location information not available</string>
+    <string name="error_parking_spot_not_found">Parking spot not found</string>
+    <string name="error_google_play_services">Google Play Services is required</string>
+    <string name="error_network">Network error. Please check your connection</string>
+    <string name="error_unknown">An unknown error occurred</string>
+
+    <!-- Map Related -->
+    <string name="current_location">Current Location</string>
+    <string name="navigate">Navigate</string>
+    <string name="map_unavailable">Maps Unavailable</string>
+    <string name="map_error">Error loading map</string>
+    <string name="location_permission_required">Location permission is required</string>
+
+    <!-- Time and Date Format -->
+    <string name="date_format">EEE, MMM dd • HH:mm</string>
+    <string name="time_format">HH:mm</string>
+
+    <!-- Quick Actions -->
+    <string name="quick_actions">Quick Actions</string>
+    <string name="view_map">View Map</string>
+    <string name="view_history">View History</string>
+    <string name="add_spot">Add Spot</string>
+
+    <!-- Navigation -->
+    <string name="navigate_to_spot">Navigate to %1$s</string>
+    <string name="opening_maps">Opening Maps…</string>
+    <string name="no_navigation_app">No navigation app found</string>
+
+    <!-- Loading States -->
+    <string name="loading">Loading…</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="processing">Processing…</string>
+
+    <!-- Confirmation Messages -->
+    <string name="confirm_logout">Are you sure you want to logout?</string>
+    <string name="confirm_cancel_booking">Are you sure you want to cancel this booking?</string>
+    <string name="confirm_delete_spot">Are you sure you want to delete this parking spot?</string>
+
+    <!-- Button Text -->
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_finish">Finish</string>
+
     <string-array name="parking_categories">
         <item>Standard</item>
         <item>EV Charging</item>

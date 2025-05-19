@@ -42,12 +42,15 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun signInWithGoogle() {
-        val signInIntent = googleSignInClient.signInIntent.apply {
-            // Force the account picker to show every time
-            putExtra("account_chooser_enabled", true)
-            putExtra("prompt", "select_account")
+        // Sign out first to force account picker
+        googleSignInClient.signOut().addOnCompleteListener {
+            val signInIntent = googleSignInClient.signInIntent.apply {
+                // Force the account picker to show every time
+                putExtra("account_chooser_enabled", true)
+                putExtra("prompt", "select_account")
+            }
+            startActivityForResult(signInIntent, RC_SIGN_IN)
         }
-        startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
